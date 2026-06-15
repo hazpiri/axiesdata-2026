@@ -13,7 +13,7 @@
 <style>
   :root{--ink:#0E1B2C;--ink-soft:#1B2A3D;--blue:#2D7FF7;--blue-deep:#1B5FCC;--blue-pale:#E9F1FE;--slate:#5A6B7B;--cream:#F6F2E9;--white:#FFFFFF;--line:#E2DBCB;--sans:'Plus Jakarta Sans',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;--maxw:1120px}
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
   body{font-family:var(--serif);background:var(--cream);color:var(--ink);line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4,.eyebrow,.btn,nav,.lang,.logo-word,.role,.backlink{font-family:var(--sans)}
   h1,h2,h3{line-height:1.14;font-weight:600;letter-spacing:-.02em}
@@ -25,7 +25,7 @@
   section{padding:80px 0}
   .lede{color:var(--slate);font-size:19px;max-width:64ch}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:100;background:#F6F2E9;border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(14,27,44,.06)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
   .brand{display:flex;align-items:center;gap:11px}
   .logo-word{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
@@ -100,7 +100,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="axiesdata-landing.html" aria-label="aXiesData home">
+    <a class="brand" href="index.html" aria-label="aXiesData home">
       <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
         <rect width="34" height="34" rx="8" fill="#0E1B2C"/>
         <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
@@ -118,7 +118,7 @@
         <button id="es" class="on" onclick="setLang('es')">ES</button>
         <button id="en" onclick="setLang('en')">EN</button>
       </div>
-      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+      <a href="index.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
     </div>
   </div>
 </header>
@@ -217,15 +217,15 @@
     <div class="wrap">
       <h2 class="t" data-es="¿Hablamos de su proceso?" data-en="Shall we talk about your process?">¿Hablamos de su proceso?</h2>
       <p class="t" data-es="Un experto senior responde — sin intermediarios." data-en="A senior expert replies — no intermediaries.">Un experto senior responde — sin intermediarios.</p>
-      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Contacto" data-en="Get in touch">Contacto</a>
+      <a href="index.html#contact" class="btn btn-primary t" data-es="Contacto" data-en="Get in touch">Contacto</a>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap foot">
-    <div class="foot-tag">a<span class="blueX">X</span>iesData · insights through data · results through insight</div>
-    <a href="axiesdata-landing.html" class="t" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
+    <div class="foot-tag">a<span class="blueX">X</span>iesData · insights through data · results through insights</div>
+    <a href="index.html" class="t" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
   </div>
 </footer>
 

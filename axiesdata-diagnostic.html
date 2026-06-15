@@ -23,7 +23,7 @@
     --sans:'Plus Jakarta Sans',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;--maxw:1120px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
   body{font-family:var(--serif);background:var(--cream);color:var(--ink);line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4,.eyebrow,.btn,nav,.lang,.logo-word,.stepnum,.tool,.note{font-family:var(--sans)}
   h1,h2,h3{line-height:1.14;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
@@ -35,7 +35,7 @@
   section{padding:84px 0}
   .lede{color:var(--slate);font-size:19px;max-width:60ch}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:100;background:#F6F2E9;border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(14,27,44,.06)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
   .brand{display:flex;align-items:center;gap:11px}
   .logo-word{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
@@ -109,7 +109,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="axiesdata-landing.html" aria-label="aXiesData home">
+    <a class="brand" href="index.html" aria-label="aXiesData home">
       <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
         <rect width="34" height="34" rx="8" fill="#0E1B2C"/>
         <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
@@ -118,12 +118,11 @@
       <span class="logo-word">a<span style="color:var(--blue)">X</span>iesData</span>
     </a>
     <div class="navright">
-      <a class="backlink t" href="axiesdata-landing.html" data-es="← Inicio" data-en="← Home">← Inicio</a>
       <div class="lang" role="group" aria-label="Language">
         <button id="es" class="on" onclick="setLang('es')">ES</button>
         <button id="en" onclick="setLang('en')">EN</button>
       </div>
-      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+      <a href="index.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
     </div>
   </div>
 </header>
@@ -136,7 +135,7 @@
       <h1 class="t" data-es="El diagnóstico de procesos" data-en="The process diagnostic">El diagnóstico de procesos</h1>
       <p class="sub t" data-es="Un primer paso de alcance y precio definidos que le muestra qué hacen realmente sus procesos — en semanas, no en meses. Sin comprometer una plataforma." data-en="A fixed-scope, fixed-price first step that shows you what your processes really do — in weeks, not months. With no platform commitment.">Un primer paso de alcance y precio definidos que le muestra qué hacen realmente sus procesos — en semanas, no en meses. Sin comprometer una plataforma.</p>
       <div class="hero-cta">
-        <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+        <a href="index.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
         <a href="#how" class="ghost t" data-es="Ver cómo funciona" data-en="See how it works">Ver cómo funciona</a>
       </div>
     </div>
@@ -236,7 +235,7 @@
     <div class="wrap">
       <h2 class="t" data-es="Empecemos por un proceso." data-en="Let's start with one process.">Empecemos por un proceso.</h2>
       <p class="t" data-es="Cuéntenos cuál le preocupa y le mostramos cómo sería el diagnóstico." data-en="Tell us which one worries you and we'll show you what the diagnostic would look like.">Cuéntenos cuál le preocupa y le mostramos cómo sería el diagnóstico.</p>
-      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+      <a href="index.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
     </div>
   </section>
 
@@ -244,8 +243,8 @@
 
 <footer>
   <div class="wrap foot">
-    <div class="foot-tag">a<span style="color:var(--blue)">X</span>iesData · insights through data · results through insight</div>
-    <a href="axiesdata-landing.html" class="t" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
+    <div class="foot-tag">a<span style="color:var(--blue)">X</span>iesData · insights through data · results through insights</div>
+    <a href="index.html" class="t" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
   </div>
 </footer>
 

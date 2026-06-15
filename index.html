@@ -37,7 +37,7 @@
     --maxw:1120px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
   body{
     font-family:var(--serif);
     background:var(--cream);
@@ -62,7 +62,7 @@
   .lede{color:var(--slate);font-size:19px}
 
   /* nav */
-  header{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:100;background:#F6F2E9;border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(14,27,44,.06)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
   .brand{display:flex;align-items:center;gap:11px}
   .brand svg{display:block}
@@ -142,7 +142,8 @@
   /* about */
   .about{background:var(--white);border-bottom:1px solid var(--line)}
   .about-grid{display:grid;grid-template-columns:160px 1fr;gap:44px;align-items:start}
-  .avatar{width:160px;height:160px;border-radius:18px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+  .avatar{width:160px;height:160px;border-radius:18px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;border:1px solid var(--line);overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
   .avatar span{font-family:var(--sans);font-weight:700;font-size:46px;color:var(--blue-deep)}
   .about h2{font-size:clamp(24px,3vw,32px)}
   .about p{color:var(--ink-soft);font-size:18px;max-width:62ch}
@@ -191,7 +192,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="axiesdata-landing.html" aria-label="aXiesData home">
+    <a class="brand" href="index.html" aria-label="aXiesData home">
       <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
         <rect width="34" height="34" rx="8" fill="#0E1B2C"/>
         <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
@@ -334,7 +335,7 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <div class="avatar" aria-hidden="true"><span>HA</span></div>
+      <div class="avatar"><img src="hernan-azpiri.jpg" alt="Hernán Azpiri" width="160" height="160"></div>
       <div>
         <span class="eyebrow t" data-es="Nosotros" data-en="About">Nosotros</span>
         <h2>Hernán Azpiri</h2>
@@ -361,33 +362,34 @@
         <h2 class="t" data-es="Hablemos de su proceso." data-en="Let's talk about your process.">Hablemos de su proceso.</h2>
         <p class="lede t" data-es="Cuéntenos dónde sospecha que se pierde tiempo o capacidad. Respondemos personalmente." data-en="Tell us where you suspect time or capacity is leaking. We reply personally.">Cuéntenos dónde sospecha que se pierde tiempo o capacidad. Respondemos personalmente.</p>
       </div>
-      <form onsubmit="return false">
+      <form id="contactForm" onsubmit="return sendMessage(event)">
         <div class="field">
           <label class="t" data-es="Nombre" data-en="Name">Nombre</label>
-          <input type="text" class="tph" data-es-ph="Su nombre" data-en-ph="Your name" placeholder="Su nombre">
+          <input id="cf-name" type="text" class="tph" data-es-ph="Su nombre" data-en-ph="Your name" placeholder="Su nombre">
         </div>
         <div class="field">
           <label class="t" data-es="País" data-en="Country">País</label>
-          <input type="text" class="tph" data-es-ph="País" data-en-ph="Country" placeholder="País">
+          <input id="cf-country" type="text" class="tph" data-es-ph="País" data-en-ph="Country" placeholder="País">
         </div>
         <div class="field">
           <label class="t" data-es="Empresa" data-en="Company">Empresa</label>
-          <input type="text" class="tph" data-es-ph="Empresa" data-en-ph="Company" placeholder="Empresa">
+          <input id="cf-company" type="text" class="tph" data-es-ph="Empresa" data-en-ph="Company" placeholder="Empresa">
         </div>
         <div class="field">
           <label class="t" data-es="Cargo" data-en="Position">Cargo</label>
-          <input type="text" class="tph" data-es-ph="Cargo" data-en-ph="Position" placeholder="Cargo">
+          <input id="cf-position" type="text" class="tph" data-es-ph="Cargo" data-en-ph="Position" placeholder="Cargo">
         </div>
         <div class="field full">
           <label class="t" data-es="Email" data-en="Email">Email</label>
-          <input type="email" class="tph" data-es-ph="nombre@empresa.com" data-en-ph="name@company.com" placeholder="nombre@empresa.com">
+          <input id="cf-email" type="email" class="tph" data-es-ph="nombre@empresa.com" data-en-ph="name@company.com" placeholder="nombre@empresa.com">
         </div>
         <div class="field full">
           <label class="t" data-es="Mensaje" data-en="Message">Mensaje</label>
-          <textarea class="tph" data-es-ph="¿Qué proceso le gustaría entender mejor?" data-en-ph="Which process would you like to understand better?" placeholder="¿Qué proceso le gustaría entender mejor?"></textarea>
+          <textarea id="cf-message" class="tph" data-es-ph="¿Qué proceso le gustaría entender mejor?" data-en-ph="Which process would you like to understand better?" placeholder="¿Qué proceso le gustaría entender mejor?"></textarea>
         </div>
         <div class="field full">
           <button type="submit" class="btn btn-primary t" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
+          <p id="cf-status" class="t" data-es="Se abrirá su aplicación de correo con el mensaje listo para enviar." data-en="Your email app will open with the message ready to send." style="font-size:13px;color:var(--slate);margin-top:10px;font-family:var(--sans)">Se abrirá su aplicación de correo con el mensaje listo para enviar.</p>
         </div>
       </form>
     </div>
@@ -407,13 +409,13 @@
           </svg>
           <span class="logo-word" style="color:#fff">a<span style="color:var(--blue)">X</span>iesData</span>
         </div>
-        <div class="foot-tag">insights through data · results through insight</div>
+        <div class="foot-tag">insights through data · results through insights</div>
       </div>
       <div class="foot-links">
         <a class="foot-link" href="#capabilities" class="t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
         <a class="foot-link" href="#why" class="t" data-es="Enfoque" data-en="Approach">Enfoque</a>
         <a class="foot-link" href="#proof" class="t" data-es="Clientes" data-en="Clients">Clientes</a>
-        <a class="foot-link" href="https://www.linkedin.com/in/hernanazpiri" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="foot-link" href="https://www.linkedin.com/company/67348684" target="_blank" rel="noopener">LinkedIn</a>
         <a class="foot-link" href="https://www.instagram.com/axiesdata" target="_blank" rel="noopener">Instagram</a>
         <a class="foot-link" href="mailto:contact@axiesdata.com">contact@axiesdata.com</a>
       </div>
@@ -443,6 +445,24 @@
       : 'aXiesData — Process mining, business intelligence & AI';
   }
   document.getElementById('yr').textContent = new Date().getFullYear();
+  function sendMessage(e){
+    e.preventDefault();
+    var v=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+    var lang=document.documentElement.lang;
+    var name=v('cf-name'), country=v('cf-country'), company=v('cf-company'),
+        position=v('cf-position'), email=v('cf-email'), message=v('cf-message');
+    var L = lang==='es'
+      ? {subj:'Consulta — diagnóstico de procesos', f:['Nombre','País','Empresa','Cargo','Email','Mensaje']}
+      : {subj:'Process diagnostic enquiry',           f:['Name','Country','Company','Position','Email','Message']};
+    var subject = L.subj + (name ? ' — ' + name : '');
+    var body = [
+      L.f[0]+': '+name, L.f[1]+': '+country, L.f[2]+': '+company,
+      L.f[3]+': '+position, L.f[4]+': '+email, '', L.f[5]+':', message
+    ].join('\n');
+    window.location.href = 'mailto:contact@axiesdata.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    return false;
+  }
   setLang('es');
 </script>
 </body>
