@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="aXiesData-symbol.svg" type="image/svg+xml">
+<title>Capacidades — aXiesData</title>
+<meta name="description" content="Process mining, business intelligence e IA entregados como una sola cadena: descubrir, medir, actuar. Celonis, SAP Signavio, Qlik y Power BI bajo dirección senior.">
+<link rel="canonical" href="https://www.axiesdata.com/capabilities">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0E1B2C;--ink-soft:#1B2A3D;--blue:#2D7FF7;--blue-deep:#1B5FCC;--blue-pale:#E9F1FE;--slate:#5A6B7B;--cream:#F6F2E9;--white:#FFFFFF;--line:#E2DBCB;--sans:'Plus Jakarta Sans',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;--maxw:1120px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);background:var(--cream);color:var(--ink);line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.eyebrow,.btn,nav,.lang,.logo-word,.tool,.backlink{font-family:var(--sans)}
+  h1,h2,h3{line-height:1.14;font-weight:600;letter-spacing:-.02em}
+  h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:.4em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:14px;display:block}
+  .blueX{color:var(--blue)}
+  section{padding:80px 0}
+  .lede{color:var(--slate);font-size:19px;max-width:62ch}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .logo-word{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--ink-soft)}
+  .navlinks a:hover,.navlinks a.active{color:var(--blue-deep)}
+  .navright{display:flex;align-items:center;gap:16px}
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--white)}
+  .lang button{font-family:var(--sans);font-size:13px;font-weight:600;border:0;background:transparent;color:var(--slate);padding:7px 13px;cursor:pointer}
+  .lang button.on{background:var(--ink);color:var(--white)}
+  .btn{display:inline-block;font-size:14.5px;font-weight:600;cursor:pointer;border:0;border-radius:999px;padding:12px 22px;transition:background .15s}
+  .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-deep)}
+  @media(max-width:860px){.navlinks{display:none}}
+
+  .hero{background:var(--ink);color:#fff;padding:90px 0 92px}
+  .hero .eyebrow{color:#7FB0FF}
+  .hero h1{color:#fff;font-size:clamp(34px,5.4vw,58px);max-width:17ch}
+  .hero .sub{color:#C3CEDC;font-size:clamp(18px,2.2vw,21px);max-width:50ch;margin-top:22px;line-height:1.5}
+
+  .pillar{border-bottom:1px solid var(--line)}
+  .pillar:nth-child(odd){background:var(--white)}
+  .pillar:nth-child(even){background:var(--cream)}
+  .p-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+  .tool{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin:6px 0 18px}
+  .pillar p{color:var(--ink-soft);font-size:18px}
+  .deliv{list-style:none;margin-top:26px;display:grid;gap:12px}
+  .deliv li{position:relative;padding-left:26px;font-size:16.5px;color:var(--ink-soft)}
+  .deliv li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--blue)}
+  .techrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .tech{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink);background:var(--blue-pale);border-radius:999px;padding:7px 14px}
+  @media(max-width:760px){.p-grid{grid-template-columns:1fr;gap:26px}}
+
+  .chain{background:var(--ink);color:#fff;text-align:center}
+  .chain h2{color:#fff;max-width:24ch;margin:0 auto .5em}
+  .chain p{color:#C3CEDC;max-width:54ch;margin:0 auto;font-size:18px}
+  .flow{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:40px}
+  .flow .node{font-family:var(--sans);font-weight:600;font-size:15px;color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:11px 22px}
+  .flow .arrow{color:#2D7FF7;font-size:20px}
+
+  .ctaband{background:var(--blue);color:#fff;text-align:center}
+  .ctaband h2{color:#fff;max-width:22ch;margin:0 auto .7em}
+  .ctaband p{color:#E1ECFF;max-width:46ch;margin:0 auto 26px;font-size:19px}
+  .ctaband .btn-primary{background:#fff;color:var(--blue-deep)}.ctaband .btn-primary:hover{background:var(--ink);color:#fff}
+
+  footer{background:var(--ink);color:#fff;padding:46px 0 36px}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  .foot-tag{font-family:var(--sans);font-size:14px;color:#8A99AB;letter-spacing:.04em}
+  .foot a{color:#C3CEDC;font-family:var(--sans);font-size:14px;font-weight:500}.foot a:hover{color:#fff}
+  :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="axiesdata-landing.html" aria-label="aXiesData home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <rect width="34" height="34" rx="8" fill="#0E1B2C"/>
+        <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M11 23 L23 11" stroke="#2D7FF7" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-word">a<span class="blueX">X</span>iesData</span>
+    </a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="axiesdata-capabilities.html" class="active t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+      <a href="axiesdata-about.html" class="t" data-es="Nosotros" data-en="About">Nosotros</a>
+      <a href="axiesdata-diagnostic.html" class="t" data-es="Diagnóstico" data-en="Diagnostic">Diagnóstico</a>
+    </nav>
+    <div class="navright">
+      <div class="lang" role="group" aria-label="Language">
+        <button id="es" class="on" onclick="setLang('es')">ES</button>
+        <button id="en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Capacidades" data-en="Capabilities">Capacidades</span>
+      <h1 class="t" data-es="De cómo funciona su negocio a cómo mejora." data-en="From how your business runs to how it improves.">De cómo funciona su negocio a cómo mejora.</h1>
+      <p class="sub t" data-es="Process mining, business intelligence e IA — entregados como una sola cadena: descubrir, medir, actuar. Bajo dirección senior, de principio a fin." data-en="Process mining, business intelligence, and AI — delivered as one chain: discover, measure, act. Senior-led, end to end.">Process mining, business intelligence e IA — entregados como una sola cadena: descubrir, medir, actuar. Bajo dirección senior, de principio a fin.</p>
+    </div>
+  </section>
+
+  <section class="pillar">
+    <div class="wrap p-grid">
+      <div>
+        <span class="eyebrow t" data-es="01 · Descubrir" data-en="01 · Discover">01 · Descubrir</span>
+        <h2 class="t" data-es="Vea el proceso real, no el supuesto." data-en="See the real process, not the assumed one.">Vea el proceso real, no el supuesto.</h2>
+        <div class="tool">Process mining</div>
+        <p class="t" data-es="Extraemos el proceso real de los registros de eventos de SAP u otro ERP y lo reconstruimos de principio a fin. Aparecen las variantes, los reprocesos, las demoras y los desvíos de cumplimiento que ningún diagrama muestra." data-en="We extract the real process from the event logs in SAP or another ERP and reconstruct it end to end. The variants, the rework, the delays, and the compliance detours no flowchart shows all surface.">Extraemos el proceso real de los registros de eventos de SAP u otro ERP y lo reconstruimos de principio a fin. Aparecen las variantes, los reprocesos, las demoras y los desvíos de cumplimiento que ningún diagrama muestra.</p>
+      </div>
+      <div>
+        <ul class="deliv">
+          <li class="t" data-es="Mapa del proceso real y todas sus variantes" data-en="Map of the real process and all its variants">Mapa del proceso real y todas sus variantes</li>
+          <li class="t" data-es="Análisis de causa raíz de cuellos de botella" data-en="Root-cause analysis of bottlenecks">Análisis de causa raíz de cuellos de botella</li>
+          <li class="t" data-es="Conformance: dónde el proceso se desvía de lo definido" data-en="Conformance: where the process deviates from design">Conformance: dónde el proceso se desvía de lo definido</li>
+          <li class="t" data-es="Casos de uso priorizados por impacto y esfuerzo" data-en="Use cases prioritized by impact and effort">Casos de uso priorizados por impacto y esfuerzo</li>
+        </ul>
+        <div class="techrow">
+          <span class="tech">Celonis</span><span class="tech">SAP Signavio</span><span class="tech">Object-centric mining</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillar">
+    <div class="wrap p-grid">
+      <div>
+        <span class="eyebrow t" data-es="02 · Medir" data-en="02 · Measure">02 · Medir</span>
+        <h2 class="t" data-es="Tableros con los que se dirige el negocio." data-en="Dashboards you run the business on.">Tableros con los que se dirige el negocio.</h2>
+        <div class="tool">Business intelligence</div>
+        <p class="t" data-es="Con Qlik y Power BI convertimos los hallazgos en métricas vivas. Modelos de datos sólidos, KPIs que importan y reportes ejecutivos claros — no otro tablero que nadie abre." data-en="With Qlik and Power BI we turn findings into live metrics. Solid data models, KPIs that matter, and clear executive reporting — not another dashboard nobody opens.">Con Qlik y Power BI convertimos los hallazgos en métricas vivas. Modelos de datos sólidos, KPIs que importan y reportes ejecutivos claros — no otro tablero que nadie abre.</p>
+      </div>
+      <div>
+        <ul class="deliv">
+          <li class="t" data-es="Modelo de datos y arquitectura de información" data-en="Data model and information architecture">Modelo de datos y arquitectura de información</li>
+          <li class="t" data-es="KPIs y tableros ejecutivos a medida" data-en="KPIs and tailored executive dashboards">KPIs y tableros ejecutivos a medida</li>
+          <li class="t" data-es="Reportes operativos y analítica self-service" data-en="Operational reporting and self-service analytics">Reportes operativos y analítica self-service</li>
+          <li class="t" data-es="Gobierno de datos — la base para que la IA funcione" data-en="Data governance — the foundation that lets AI work">Gobierno de datos — la base para que la IA funcione</li>
+        </ul>
+        <div class="techrow">
+          <span class="tech">Qlik</span><span class="tech">Power BI</span><span class="tech">SQL</span><span class="tech">PQL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillar">
+    <div class="wrap p-grid">
+      <div>
+        <span class="eyebrow t" data-es="03 · Actuar" data-en="03 · Act">03 · Actuar</span>
+        <h2 class="t" data-es="IA donde el análisis demuestra que paga." data-en="AI where the analysis proves it pays.">IA donde el análisis demuestra que paga.</h2>
+        <div class="tool">Artificial intelligence</div>
+        <p class="t" data-es="No agregamos IA porque está de moda. La aplicamos donde el process mining ya demostró el problema: predicción, asistentes sobre sus propios datos gobernados y automatización de los cuellos de botella detectados." data-en="We don't add AI because it's fashionable. We apply it where process mining already proved the problem: forecasting, assistants on your own governed data, and automation of the bottlenecks we found.">No agregamos IA porque está de moda. La aplicamos donde el process mining ya demostró el problema: predicción, asistentes sobre sus propios datos gobernados y automatización de los cuellos de botella detectados.</p>
+      </div>
+      <div>
+        <ul class="deliv">
+          <li class="t" data-es="Modelos predictivos y de forecasting" data-en="Predictive and forecasting models">Modelos predictivos y de forecasting</li>
+          <li class="t" data-es="Asistentes de IA (RAG) sobre datos propios" data-en="AI assistants (RAG) on your own data">Asistentes de IA (RAG) sobre datos propios</li>
+          <li class="t" data-es="Automatización de procesos y tareas" data-en="Process and task automation">Automatización de procesos y tareas</li>
+          <li class="t" data-es="Evaluación de preparación para IA" data-en="AI-readiness assessment">Evaluación de preparación para IA</li>
+        </ul>
+        <div class="techrow">
+          <span class="tech">Machine learning</span><span class="tech">RAG / LLM</span><span class="tech">Automation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chain">
+    <div class="wrap">
+      <h2 class="t" data-es="Una cadena, no un menú." data-en="One chain, not a menu.">Una cadena, no un menú.</h2>
+      <p class="t" data-es="Cada etapa alimenta la siguiente. Puede empezar por un diagnóstico de procesos y crecer hacia BI e IA — con el mismo experto senior de punta a punta." data-en="Each stage feeds the next. You can start with a process diagnostic and grow into BI and AI — with the same senior expert end to end.">Cada etapa alimenta la siguiente. Puede empezar por un diagnóstico de procesos y crecer hacia BI e IA — con el mismo experto senior de punta a punta.</p>
+      <div class="flow">
+        <span class="node t" data-es="Descubrir" data-en="Discover">Descubrir</span>
+        <span class="arrow">→</span>
+        <span class="node t" data-es="Medir" data-en="Measure">Medir</span>
+        <span class="arrow">→</span>
+        <span class="node t" data-es="Actuar" data-en="Act">Actuar</span>
+        <span class="arrow">→</span>
+        <span class="node t" data-es="Resultados" data-en="Results">Resultados</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ctaband">
+    <div class="wrap">
+      <h2 class="t" data-es="Empecemos por un proceso." data-en="Let's start with one process.">Empecemos por un proceso.</h2>
+      <p class="t" data-es="El diagnóstico de procesos es el primer paso, de alcance definido y bajo riesgo." data-en="The process diagnostic is the fixed-scope, low-risk first step.">El diagnóstico de procesos es el primer paso, de alcance definido y bajo riesgo.</p>
+      <a href="axiesdata-diagnostic.html" class="btn btn-primary t" data-es="Conocer el diagnóstico" data-en="See the diagnostic">Conocer el diagnóstico</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-tag">a<span class="blueX">X</span>iesData · insights through data · results through insight</div>
+    <a href="axiesdata-landing.html" class="t" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('.t').forEach(function(el){var v=el.getAttribute('data-'+lang);if(v!==null)el.innerHTML=v;});
+    document.getElementById('es').classList.toggle('on',lang==='es');
+    document.getElementById('en').classList.toggle('on',lang==='en');
+    document.title=lang==='es'?'Capacidades — aXiesData':'Capabilities — aXiesData';
+  }
+  setLang('es');
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="aXiesData-symbol.svg" type="image/svg+xml">
+<title>Nosotros — aXiesData</title>
+<meta name="description" content="aXiesData es una práctica boutique de procesos y datos liderada por Hernán Azpiri — 25+ años en SAP, BI y process mining, con experiencia desde adentro de Celonis y Qlik.">
+<link rel="canonical" href="https://www.axiesdata.com/about">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0E1B2C;--ink-soft:#1B2A3D;--blue:#2D7FF7;--blue-deep:#1B5FCC;--blue-pale:#E9F1FE;--slate:#5A6B7B;--cream:#F6F2E9;--white:#FFFFFF;--line:#E2DBCB;--sans:'Plus Jakarta Sans',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;--maxw:1120px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);background:var(--cream);color:var(--ink);line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.eyebrow,.btn,nav,.lang,.logo-word,.role,.backlink{font-family:var(--sans)}
+  h1,h2,h3{line-height:1.14;font-weight:600;letter-spacing:-.02em}
+  h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:.4em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:14px;display:block}
+  .blueX{color:var(--blue)}
+  section{padding:80px 0}
+  .lede{color:var(--slate);font-size:19px;max-width:64ch}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .logo-word{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--ink-soft)}
+  .navlinks a:hover,.navlinks a.active{color:var(--blue-deep)}
+  .navright{display:flex;align-items:center;gap:16px}
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--white)}
+  .lang button{font-family:var(--sans);font-size:13px;font-weight:600;border:0;background:transparent;color:var(--slate);padding:7px 13px;cursor:pointer}
+  .lang button.on{background:var(--ink);color:var(--white)}
+  .btn{display:inline-block;font-size:14.5px;font-weight:600;cursor:pointer;border:0;border-radius:999px;padding:12px 22px;transition:background .15s}
+  .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-deep)}
+  @media(max-width:860px){.navlinks{display:none}}
+
+  .hero{background:var(--ink);color:#fff;padding:90px 0 92px}
+  .hero .eyebrow{color:#7FB0FF}
+  .hero h1{color:#fff;font-size:clamp(34px,5.4vw,58px);max-width:15ch}
+  .hero .sub{color:#C3CEDC;font-size:clamp(18px,2.2vw,21px);max-width:52ch;margin-top:22px;line-height:1.5}
+
+  .story{background:var(--cream)}
+  .story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
+  .story p{color:var(--ink-soft);font-size:18.5px}
+  .story p+p{margin-top:18px}
+  .story em{font-style:italic}
+  @media(max-width:760px){.story-grid{grid-template-columns:1fr;gap:24px}}
+
+  .founder{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .f-grid{display:grid;grid-template-columns:180px 1fr;gap:46px;align-items:start}
+  .avatar{width:180px;height:180px;border-radius:20px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+  .avatar span{font-family:var(--sans);font-weight:700;font-size:54px;color:var(--blue-deep)}
+  .role{font-size:14px;font-weight:600;color:var(--slate);letter-spacing:.03em;margin:6px 0 16px}
+  .founder p{color:var(--ink-soft);font-size:18px;max-width:64ch}
+  @media(max-width:620px){.f-grid{grid-template-columns:1fr;gap:22px}.avatar{width:120px;height:120px}.avatar span{font-size:38px}}
+
+  .pedigree{background:var(--cream)}
+  .ped-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .ped{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px 26px}
+  .ped .mk{width:34px;height:34px;border-radius:9px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .ped .mk span{width:9px;height:9px;border-radius:50%;background:var(--blue);display:block}
+  .ped h3{font-size:18px;margin-bottom:8px}
+  .ped p{font-size:16px;color:var(--ink-soft);line-height:1.5}
+  @media(max-width:760px){.ped-grid{grid-template-columns:1fr;gap:16px}}
+
+  .approach{background:var(--white);border-top:1px solid var(--line)}
+  .app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px}
+  .app-item{border-top:2px solid var(--blue);padding-top:18px}
+  .app-item h3{font-size:18px;margin-bottom:8px}
+  .app-item p{font-size:16px;color:var(--slate)}
+  @media(max-width:760px){.app-grid{grid-template-columns:1fr;gap:28px}}
+
+  .exp{background:var(--ink);color:#fff}
+  .exp .eyebrow{color:#7FB0FF}
+  .exp h2{color:#fff}
+  .exp .note{color:#8A99AB;font-size:15.5px;max-width:50ch;margin-top:6px}
+  .logos{display:flex;flex-wrap:wrap;gap:14px 36px;align-items:center;margin-top:38px}
+  .logos span{font-family:var(--sans);font-weight:700;font-size:20px;color:#9DB0C6;opacity:.8}
+
+  .ctaband{background:var(--blue);color:#fff;text-align:center}
+  .ctaband h2{color:#fff;max-width:22ch;margin:0 auto .7em}
+  .ctaband p{color:#E1ECFF;max-width:46ch;margin:0 auto 26px;font-size:19px}
+  .ctaband .btn-primary{background:#fff;color:var(--blue-deep)}.ctaband .btn-primary:hover{background:var(--ink);color:#fff}
+
+  footer{background:var(--ink);color:#fff;padding:46px 0 36px}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  .foot-tag{font-family:var(--sans);font-size:14px;color:#8A99AB;letter-spacing:.04em}
+  .foot a{color:#C3CEDC;font-family:var(--sans);font-size:14px;font-weight:500}.foot a:hover{color:#fff}
+  :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="axiesdata-landing.html" aria-label="aXiesData home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <rect width="34" height="34" rx="8" fill="#0E1B2C"/>
+        <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M11 23 L23 11" stroke="#2D7FF7" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-word">a<span class="blueX">X</span>iesData</span>
+    </a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="axiesdata-capabilities.html" class="t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+      <a href="axiesdata-about.html" class="active t" data-es="Nosotros" data-en="About">Nosotros</a>
+      <a href="axiesdata-diagnostic.html" class="t" data-es="Diagnóstico" data-en="Diagnostic">Diagnóstico</a>
+    </nav>
+    <div class="navright">
+      <div class="lang" role="group" aria-label="Language">
+        <button id="es" class="on" onclick="setLang('es')">ES</button>
+        <button id="en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Nosotros" data-en="About">Nosotros</span>
+      <h1 class="t" data-es="25 años dentro de los datos empresariales." data-en="25 years inside enterprise data.">25 años dentro de los datos empresariales.</h1>
+      <p class="sub t" data-es="aXiesData es una práctica boutique de procesos y datos. La diferencia: experiencia construida desde adentro de las plataformas que otros solo revenden." data-en="aXiesData is a boutique process-and-data practice. The difference: expertise built from inside the platforms others only resell.">aXiesData es una práctica boutique de procesos y datos. La diferencia: experiencia construida desde adentro de las plataformas que otros solo revenden.</p>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap story-grid">
+      <div>
+        <span class="eyebrow t" data-es="Por qué existimos" data-en="Why we exist">Por qué existimos</span>
+        <h2 class="t" data-es="Empezamos por la realidad." data-en="We start with reality.">Empezamos por la realidad.</h2>
+      </div>
+      <div>
+        <p class="t" data-es="La mayoría de los proyectos de datos no fracasan por la herramienta, sino por lo que hay debajo: procesos que nadie entiende del todo y datos en los que nadie confía." data-en="Most data projects don't fail because of the tool — they fail because of what sits underneath: processes nobody fully understands and data nobody trusts.">La mayoría de los proyectos de datos no fracasan por la herramienta, sino por lo que hay debajo: procesos que nadie entiende del todo y datos en los que nadie confía.</p>
+        <p class="t" data-es="Fundamos aXiesData para empezar por ahí — por <em>cómo funciona realmente el negocio</em> — y construir desde una base sólida hacia BI e IA. Trabajo de nivel enterprise, sin la estructura ni el costo de las grandes consultoras." data-en="We founded aXiesData to start there — with <em>how the business actually runs</em> — and build from a solid foundation toward BI and AI. Enterprise-grade work, without the overhead or cost of the big firms.">Fundamos aXiesData para empezar por ahí — por <em>cómo funciona realmente el negocio</em> — y construir desde una base sólida hacia BI e IA. Trabajo de nivel enterprise, sin la estructura ni el costo de las grandes consultoras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="wrap f-grid">
+      <div class="avatar" aria-hidden="true"><span>HA</span></div>
+      <div>
+        <span class="eyebrow t" data-es="Fundador" data-en="Founder">Fundador</span>
+        <h2>Hernán Azpiri</h2>
+        <p class="role t" data-es="Fundador y especialista principal" data-en="Founder & principal specialist">Fundador y especialista principal</p>
+        <p class="t" data-es="Más de 25 años liderando transformación digital y optimización de procesos en empresas globales. Ex Customer Success Manager en Celonis y ex Technical Account Manager en QlikTech — experiencia desde adentro de las dos plataformas que definen el process mining y el BI moderno. Ha dirigido implementaciones de process mining, ERP y CRM, equipos de más de 80 profesionales y proyectos de más de USD 15 millones, en Latinoamérica, Estados Unidos y Europa. MBA por Rice University; Licenciado en Sistemas de Información." data-en="25+ years leading digital transformation and process optimization across global enterprises. A former Customer Success Manager at Celonis and Technical Account Manager at QlikTech — experience from inside the two platforms that define modern process mining and BI. He has led process-mining, ERP, and CRM implementations, teams of 80+ professionals, and projects exceeding USD 15 million, across Latin America, the US, and Europe. MBA from Rice University; BSc in Information Systems.">Más de 25 años liderando transformación digital y optimización de procesos en empresas globales. Ex Customer Success Manager en Celonis y ex Technical Account Manager en QlikTech — experiencia desde adentro de las dos plataformas que definen el process mining y el BI moderno. Ha dirigido implementaciones de process mining, ERP y CRM, equipos de más de 80 profesionales y proyectos de más de USD 15 millones, en Latinoamérica, Estados Unidos y Europa. MBA por Rice University; Licenciado en Sistemas de Información.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pedigree">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Pedigrí" data-en="Pedigree">Pedigrí</span>
+      <h2 class="t" data-es="Lo que nadie más puede decir." data-en="What no one else can claim.">Lo que nadie más puede decir.</h2>
+      <div class="ped-grid">
+        <div class="ped">
+          <div class="mk"><span></span></div>
+          <h3 class="t" data-es="Desde adentro de Celonis y Qlik" data-en="From inside Celonis and Qlik">Desde adentro de Celonis y Qlik</h3>
+          <p class="t" data-es="No solo certificado: entregó proyectos desde adentro de ambas plataformas, como parte de sus equipos." data-en="Not just certified: delivered projects from within both platforms, as part of their teams.">No solo certificado: entregó proyectos desde adentro de ambas plataformas, como parte de sus equipos.</p>
+        </div>
+        <div class="ped">
+          <div class="mk"><span></span></div>
+          <h3 class="t" data-es="Primeras implementaciones" data-en="Industry firsts">Primeras implementaciones</h3>
+          <p class="t" data-es="Primera implementación de Celonis en la nube en Latinoamérica; primeras implementaciones en México y Brasil." data-en="First Celonis cloud deployment in Latin America; first deployments in Mexico and Brazil.">Primera implementación de Celonis en la nube en Latinoamérica; primeras implementaciones en México y Brasil.</p>
+        </div>
+        <div class="ped">
+          <div class="mk"><span></span></div>
+          <h3 class="t" data-es="Frontera técnica" data-en="Technical frontier">Frontera técnica</h3>
+          <p class="t" data-es="Experto principal en la migración a process mining centrado en objetos de MercadoLibre." data-en="Principal expert on MercadoLibre's object-centric process-mining migration.">Experto principal en la migración a process mining centrado en objetos de MercadoLibre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</span>
+      <h2 class="t" data-es="Tres principios, sin excepción." data-en="Three principles, no exceptions.">Tres principios, sin excepción.</h2>
+      <div class="app-grid">
+        <div class="app-item">
+          <h3 class="t" data-es="Primero el proceso" data-en="Process-first">Primero el proceso</h3>
+          <p class="t" data-es="Partimos de la evidencia de cómo ocurre el trabajo, no de una herramienta ni de una presentación." data-en="We lead with evidence of how work actually happens — not a tool, and not a deck.">Partimos de la evidencia de cómo ocurre el trabajo, no de una herramienta ni de una presentación.</p>
+        </div>
+        <div class="app-item">
+          <h3 class="t" data-es="Dirección senior" data-en="Senior-led">Dirección senior</h3>
+          <p class="t" data-es="Cada proyecto lo lidera un profesional senior, respaldado por un equipo enfocado. Nunca un banco de recursos junior." data-en="Every engagement is led by a senior, backed by a focused team. Never a junior bench.">Cada proyecto lo lidera un profesional senior, respaldado por un equipo enfocado. Nunca un banco de recursos junior.</p>
+        </div>
+        <div class="app-item">
+          <h3 class="t" data-es="Honestos con la IA" data-en="Honest on AI">Honestos con la IA</h3>
+          <p class="t" data-es="No prometemos IA que no podemos construir. Somos la base que hace que la IA empresarial funcione de verdad." data-en="We don't promise AI we can't build. We're the foundation that makes enterprise AI actually work.">No prometemos IA que no podemos construir. Somos la base que hace que la IA empresarial funcione de verdad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="exp">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Experiencia seleccionada" data-en="Selected experience">Experiencia seleccionada</span>
+      <h2 class="t" data-es="Confianza en proyectos de este nivel." data-en="Trusted on work at this level.">Confianza en proyectos de este nivel.</h2>
+      <p class="note t" data-es="Proyectos enterprise entregados de forma directa y junto a consultoras líderes." data-en="Enterprise engagements delivered directly and alongside leading consultancies.">Proyectos enterprise entregados de forma directa y junto a consultoras líderes.</p>
+      <div class="logos">
+        <span>FedEx</span><span>Whirlpool</span><span>Wells&nbsp;Fargo</span><span>MercadoLibre</span><span>Alsea</span><span>Derco</span><span>CBC</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ctaband">
+    <div class="wrap">
+      <h2 class="t" data-es="¿Hablamos de su proceso?" data-en="Shall we talk about your process?">¿Hablamos de su proceso?</h2>
+      <p class="t" data-es="Un experto senior responde — sin intermediarios." data-en="A senior expert replies — no intermediaries.">Un experto senior responde — sin intermediarios.</p>
+      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Contacto" data-en="Get in touch">Contacto</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-tag">a<span class="blueX">X</span>iesData · insights through data · results through insight</div>
+    <a href="axiesdata-landing.html" class="t" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('.t').forEach(function(el){var v=el.getAttribute('data-'+lang);if(v!==null)el.innerHTML=v;});
+    document.getElementById('es').classList.toggle('on',lang==='es');
+    document.getElementById('en').classList.toggle('on',lang==='en');
+    document.title=lang==='es'?'Nosotros — aXiesData':'About — aXiesData';
+  }
+  setLang('es');
+</script>
+</body>
+</html>
