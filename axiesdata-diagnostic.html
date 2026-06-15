@@ -37,6 +37,10 @@
 
   header{position:sticky;top:0;z-index:100;background:#F6F2E9;border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(14,27,44,.06)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--ink-soft)}
+  .navlinks a:hover,.navlinks a.active{color:var(--blue-deep)}
+  @media(max-width:860px){.navlinks{display:none}}
   .brand{display:flex;align-items:center;gap:11px}
   .logo-word{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
   .navright{display:flex;align-items:center;gap:18px}
@@ -117,6 +121,11 @@
       </svg>
       <span class="logo-word">a<span style="color:var(--blue)">X</span>iesData</span>
     </a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="axiesdata-capabilities.html" class="t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+      <a href="axiesdata-about.html" class="t" data-es="Nosotros" data-en="About">Nosotros</a>
+      <a href="axiesdata-diagnostic.html" class="active t" data-es="Diagnóstico" data-en="Diagnostic">Diagnóstico</a>
+    </nav>
     <div class="navright">
       <div class="lang" role="group" aria-label="Language">
         <button id="es" class="on" onclick="setLang('es')">ES</button>
