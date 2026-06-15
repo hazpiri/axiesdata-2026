@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="aXiesData-symbol.svg" type="image/svg+xml">
+<title>Diagnóstico de procesos — aXiesData</title>
+<meta name="description" content="Un primer paso de alcance y precio definidos que revela qué hacen realmente sus procesos con process mining — en semanas, sin comprar una plataforma. Para empresas medianas sobre SAP u otro ERP.">
+<meta name="keywords" content="diagnóstico de procesos, process mining, Celonis for Consulting, SAP, ERP, proof of value, business intelligence, optimización de procesos, Latinoamérica">
+<meta property="og:type" content="article">
+<meta property="og:title" content="El diagnóstico de procesos — aXiesData">
+<meta property="og:description" content="Vea qué hacen realmente sus procesos en semanas, no en meses. Alcance fijo, sin comprometer una plataforma.">
+<meta property="og:url" content="https://www.axiesdata.com/diagnostic">
+<meta property="og:site_name" content="aXiesData">
+<link rel="canonical" href="https://www.axiesdata.com/diagnostic">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1B2C;--ink-soft:#1B2A3D;--blue:#2D7FF7;--blue-deep:#1B5FCC;--blue-pale:#E9F1FE;
+    --slate:#5A6B7B;--cream:#F6F2E9;--cream-deep:#EFE9DB;--white:#FFFFFF;--line:#E2DBCB;
+    --sans:'Plus Jakarta Sans',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;--maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);background:var(--cream);color:var(--ink);line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.eyebrow,.btn,nav,.lang,.logo-word,.stepnum,.tool,.note{font-family:var(--sans)}
+  h1,h2,h3{line-height:1.14;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+  h2{font-size:clamp(28px,4vw,40px);margin-bottom:.4em}
+  h3{font-size:20px;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:14px;display:block}
+  section{padding:84px 0}
+  .lede{color:var(--slate);font-size:19px;max-width:60ch}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .logo-word{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+  .navright{display:flex;align-items:center;gap:18px}
+  .backlink{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink-soft)}
+  .backlink:hover{color:var(--blue-deep)}
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--white)}
+  .lang button{font-family:var(--sans);font-size:13px;font-weight:600;border:0;background:transparent;color:var(--slate);padding:7px 13px;cursor:pointer}
+  .lang button.on{background:var(--ink);color:var(--white)}
+  .btn{display:inline-block;font-size:14.5px;font-weight:600;cursor:pointer;border:0;border-radius:999px;padding:12px 22px;transition:transform .12s,background .15s}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--blue-deep)}
+  .btn:active{transform:translateY(1px)}
+
+  .hero{background:var(--ink);color:#fff;padding:92px 0 96px}
+  .hero .eyebrow{color:#7FB0FF}
+  .hero h1{color:#fff;font-size:clamp(36px,5.6vw,60px);max-width:16ch}
+  .hero .sub{color:#C3CEDC;font-size:clamp(18px,2.2vw,21px);max-width:48ch;margin:24px 0 32px;line-height:1.5}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero .ghost{font-family:var(--sans);font-size:14.5px;font-weight:600;color:#C3CEDC;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px}
+  .hero .ghost:hover{color:#fff}
+
+  .whatis{background:var(--cream)}
+  .whatis-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
+  .whatis p{color:var(--ink-soft);font-size:18.5px}
+  .whatis .pull{font-family:var(--sans);font-weight:600;font-size:clamp(22px,3vw,30px);letter-spacing:-.02em;line-height:1.2}
+  @media(max-width:760px){.whatis-grid{grid-template-columns:1fr;gap:24px}}
+
+  .get{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:20px;margin-top:44px}
+  .card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+  .card .mk{width:34px;height:34px;border-radius:9px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .card .mk span{width:9px;height:9px;border-radius:50%;background:var(--blue);display:block}
+  .card h3{margin-bottom:8px;font-size:18px}
+  .card p{font-size:16px;color:var(--ink-soft);line-height:1.5}
+
+  .how{background:var(--cream)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:44px}
+  .step{position:relative;padding-top:26px;border-top:2px solid var(--blue)}
+  .step .stepnum{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue);margin-bottom:8px}
+  .step h3{font-size:18px;margin-bottom:8px}
+  .step p{font-size:16px;color:var(--slate);line-height:1.5}
+  .note{margin-top:30px;font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--slate);display:inline-flex;align-items:center;gap:9px}
+  .note .d{width:8px;height:8px;border-radius:50%;background:var(--blue);display:inline-block}
+
+  .risk{background:var(--white);border-top:1px solid var(--line)}
+  .risk-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
+  .risk p{color:var(--ink-soft);font-size:18.5px}
+  @media(max-width:760px){.risk-grid{grid-template-columns:1fr;gap:24px}}
+
+  .who{background:var(--cream)}
+  .who .lede{font-size:21px;color:var(--ink-soft);max-width:64ch}
+
+  .ctaband{background:var(--blue);color:#fff;text-align:center}
+  .ctaband h2{color:#fff;max-width:20ch;margin:0 auto .7em}
+  .ctaband p{color:#E1ECFF;max-width:46ch;margin:0 auto 26px;font-size:19px}
+  .ctaband .btn-primary{background:#fff;color:var(--blue-deep)}
+  .ctaband .btn-primary:hover{background:var(--ink);color:#fff}
+
+  footer{background:var(--ink);color:#fff;padding:46px 0 36px}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  .foot-tag{font-family:var(--sans);font-size:14px;color:#8A99AB;letter-spacing:.04em}
+  .foot a{color:#C3CEDC;font-family:var(--sans);font-size:14px;font-weight:500}
+  .foot a:hover{color:#fff}
+
+  :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="axiesdata-landing.html" aria-label="aXiesData home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <rect width="34" height="34" rx="8" fill="#0E1B2C"/>
+        <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M11 23 L23 11" stroke="#2D7FF7" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-word">a<span style="color:var(--blue)">X</span>iesData</span>
+    </a>
+    <div class="navright">
+      <a class="backlink t" href="axiesdata-landing.html" data-es="← Inicio" data-en="← Home">← Inicio</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="es" class="on" onclick="setLang('es')">ES</button>
+        <button id="en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="El primer paso" data-en="The first step">El primer paso</span>
+      <h1 class="t" data-es="El diagnóstico de procesos" data-en="The process diagnostic">El diagnóstico de procesos</h1>
+      <p class="sub t" data-es="Un primer paso de alcance y precio definidos que le muestra qué hacen realmente sus procesos — en semanas, no en meses. Sin comprometer una plataforma." data-en="A fixed-scope, fixed-price first step that shows you what your processes really do — in weeks, not months. With no platform commitment.">Un primer paso de alcance y precio definidos que le muestra qué hacen realmente sus procesos — en semanas, no en meses. Sin comprometer una plataforma.</p>
+      <div class="hero-cta">
+        <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+        <a href="#how" class="ghost t" data-es="Ver cómo funciona" data-en="See how it works">Ver cómo funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="whatis">
+    <div class="wrap whatis-grid">
+      <div>
+        <span class="eyebrow t" data-es="Qué es" data-en="What it is">Qué es</span>
+        <p class="pull t" data-es="Process mining aplicado a un proceso real." data-en="Process mining applied to one real process.">Process mining aplicado a un proceso real.</p>
+      </div>
+      <div>
+        <p class="t" data-es="Tomamos los registros de eventos que sus sistemas ya generan — SAP u otro ERP — y reconstruimos cómo fluye realmente un proceso de principio a fin: compras (procure-to-pay), ventas (order-to-cash) o el que más le preocupe. No es una encuesta ni un taller de supuestos: es el proceso real, con datos." data-en="We take the event logs your systems already generate — SAP or another ERP — and reconstruct how one process truly flows end to end: procure-to-pay, order-to-cash, or whichever one worries you most. It isn't a survey or an assumptions workshop — it's the real process, in data.">Tomamos los registros de eventos que sus sistemas ya generan — SAP u otro ERP — y reconstruimos cómo fluye realmente un proceso de principio a fin: compras (procure-to-pay), ventas (order-to-cash) o el que más le preocupe. No es una encuesta ni un taller de supuestos: es el proceso real, con datos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Qué recibe" data-en="What you get">Qué recibe</span>
+      <h2 class="t" data-es="Cuatro entregables concretos." data-en="Four concrete deliverables.">Cuatro entregables concretos.</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="mk"><span></span></div>
+          <h3 class="t" data-es="Un mapa del proceso real" data-en="A map of the real process">Un mapa del proceso real</h3>
+          <p class="t" data-es="Cómo fluye de verdad, con todas sus variantes y desvíos." data-en="How it actually flows, with every variant and detour.">Cómo fluye de verdad, con todas sus variantes y desvíos.</p>
+        </div>
+        <div class="card">
+          <div class="mk"><span></span></div>
+          <h3 class="t" data-es="Cuellos de botella cuantificados" data-en="Quantified bottlenecks">Cuellos de botella cuantificados</h3>
+          <p class="t" data-es="Dónde se pierde tiempo, dónde hay retrabajo y dónde se escapa valor." data-en="Where time is lost, where rework happens, and where value leaks.">Dónde se pierde tiempo, dónde hay retrabajo y dónde se escapa valor.</p>
+        </div>
+        <div class="card">
+          <div class="mk"><span></span></div>
+          <h3 class="t" data-es="Oportunidades priorizadas" data-en="Prioritized opportunities">Oportunidades priorizadas</h3>
+          <p class="t" data-es="Qué resolver primero, ordenado por impacto y esfuerzo." data-en="What to fix first, ranked by impact and effort.">Qué resolver primero, ordenado por impacto y esfuerzo.</p>
+        </div>
+        <div class="card">
+          <div class="mk"><span></span></div>
+          <h3 class="t" data-es="Una hoja de ruta" data-en="A roadmap">Una hoja de ruta</h3>
+          <p class="t" data-es="El caso de negocio para los próximos pasos: BI, automatización o IA." data-en="The business case for next steps: BI, automation, or AI.">El caso de negocio para los próximos pasos: BI, automatización o IA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Cómo funciona" data-en="How it works">Cómo funciona</span>
+      <h2 class="t" data-es="Cuatro pasos, unas pocas semanas." data-en="Four steps, a few weeks.">Cuatro pasos, unas pocas semanas.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="stepnum">01</div>
+          <h3 class="t" data-es="Alcance y conexión" data-en="Scope & connect">Alcance y conexión</h3>
+          <p class="t" data-es="Elegimos un proceso y conectamos de forma segura a la fuente de datos. Sin instalaciones pesadas." data-en="We pick one process and securely connect to the data source. No heavy installation.">Elegimos un proceso y conectamos de forma segura a la fuente de datos. Sin instalaciones pesadas.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum">02</div>
+          <h3 class="t" data-es="Descubrimiento y análisis" data-en="Mine & analyze">Descubrimiento y análisis</h3>
+          <p class="t" data-es="Reconstruimos el proceso y medimos sus desviaciones, demoras y costos ocultos." data-en="We reconstruct the process and measure its deviations, delays, and hidden costs.">Reconstruimos el proceso y medimos sus desviaciones, demoras y costos ocultos.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum">03</div>
+          <h3 class="t" data-es="Taller de hallazgos" data-en="Findings workshop">Taller de hallazgos</h3>
+          <p class="t" data-es="Le mostramos lo que encontramos y lo validamos junto a su equipo." data-en="We walk you through what we found and validate it with your team.">Le mostramos lo que encontramos y lo validamos junto a su equipo.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum">04</div>
+          <h3 class="t" data-es="Hoja de ruta" data-en="Roadmap">Hoja de ruta</h3>
+          <p class="t" data-es="Entregamos prioridades y un caso de negocio claro para decidir el siguiente paso." data-en="We hand over priorities and a clear business case to decide the next move.">Entregamos prioridades y un caso de negocio claro para decidir el siguiente paso.</p>
+        </div>
+      </div>
+      <div class="note"><span class="d"></span><span class="t" data-es="Típicamente 3 a 5 semanas." data-en="Typically 3 to 5 weeks.">Típicamente 3 a 5 semanas.</span></div>
+    </div>
+  </section>
+
+  <section class="risk">
+    <div class="wrap risk-grid">
+      <div>
+        <span class="eyebrow t" data-es="Por qué es de bajo riesgo" data-en="Why it's low-risk">Por qué es de bajo riesgo</span>
+        <h2 class="t" data-es="Alcance fijo. Sin comprar plataforma." data-en="Fixed scope. No platform to buy.">Alcance fijo. Sin comprar plataforma.</h2>
+      </div>
+      <div>
+        <p class="t" data-es="El diagnóstico tiene alcance y precio cerrados desde el inicio, así sabe exactamente qué esperar. Y se ejecuta sobre tecnología de process mining a través del programa Celonis for Consulting — usted no necesita adquirir ni licenciar una plataforma para empezar. Si decide avanzar, ya tendrá la evidencia y el caso de negocio en la mano." data-en="The diagnostic has a closed scope and price from the start, so you know exactly what to expect. And it runs on process-mining technology through the Celonis for Consulting program — you don't need to buy or license a platform to begin. If you decide to move forward, you'll already have the evidence and the business case in hand.">El diagnóstico tiene alcance y precio cerrados desde el inicio, así sabe exactamente qué esperar. Y se ejecuta sobre tecnología de process mining a través del programa Celonis for Consulting — usted no necesita adquirir ni licenciar una plataforma para empezar. Si decide avanzar, ya tendrá la evidencia y el caso de negocio en la mano.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="who">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Para quién" data-en="Who it's for">Para quién</span>
+      <p class="lede t" data-es="Pensado para empresas medianas que operan sobre SAP u otro ERP y sienten que se pierde tiempo o capacidad en procesos como compras, cuentas por pagar, cuentas por cobrar o cumplimiento de pedidos — pero no logran ver exactamente dónde." data-en="Built for mid-market companies running SAP or another ERP that sense time or capacity leaking in processes like purchasing, accounts payable, accounts receivable, or order fulfillment — but can't see exactly where.">Pensado para empresas medianas que operan sobre SAP u otro ERP y sienten que se pierde tiempo o capacidad en procesos como compras, cuentas por pagar, cuentas por cobrar o cumplimiento de pedidos — pero no logran ver exactamente dónde.</p>
+    </div>
+  </section>
+
+  <section class="ctaband">
+    <div class="wrap">
+      <h2 class="t" data-es="Empecemos por un proceso." data-en="Let's start with one process.">Empecemos por un proceso.</h2>
+      <p class="t" data-es="Cuéntenos cuál le preocupa y le mostramos cómo sería el diagnóstico." data-en="Tell us which one worries you and we'll show you what the diagnostic would look like.">Cuéntenos cuál le preocupa y le mostramos cómo sería el diagnóstico.</p>
+      <a href="axiesdata-landing.html#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-tag">a<span style="color:var(--blue)">X</span>iesData · insights through data · results through insight</div>
+    <a href="axiesdata-landing.html" class="t" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.t').forEach(function(el){
+      var v = el.getAttribute('data-'+lang);
+      if(v!==null) el.innerHTML = v;
+    });
+    document.getElementById('es').classList.toggle('on', lang==='es');
+    document.getElementById('en').classList.toggle('on', lang==='en');
+    document.title = lang==='es' ? 'Diagnóstico de procesos — aXiesData' : 'The process diagnostic — aXiesData';
+  }
+  setLang('es');
+</script>
+</body>
+</html>

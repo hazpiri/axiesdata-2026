@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="aXiesData-symbol.svg" type="image/svg+xml">
+<title>aXiesData — Process mining, business intelligence e IA</title>
+<meta name="description" content="aXiesData descubre cómo funcionan realmente sus procesos y convierte esos hallazgos en resultados — combinando process mining, business intelligence e IA. Práctica boutique con dirección senior, desde adentro de Celonis y Qlik.">
+<meta name="keywords" content="process mining, Celonis, business intelligence, Qlik, Power BI, inteligencia artificial, IA, SAP Signavio, diagnóstico de procesos, consultoría de datos, Latinoamérica">
+<meta name="author" content="aXiesData">
+<meta property="og:type" content="website">
+<meta property="og:title" content="aXiesData — Vea cómo funciona realmente su negocio">
+<meta property="og:description" content="Process mining, BI e IA: convertimos cómo funciona su negocio en cómo mejora. Dirección senior, del diagnóstico a los resultados.">
+<meta property="og:url" content="https://www.axiesdata.com/">
+<meta property="og:site_name" content="aXiesData">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="aXiesData — Vea cómo funciona realmente su negocio">
+<meta name="twitter:description" content="Process mining, business intelligence e IA, con dirección senior — del diagnóstico a los resultados.">
+<link rel="canonical" href="https://www.axiesdata.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1B2C;
+    --ink-soft:#1B2A3D;
+    --blue:#2D7FF7;
+    --blue-deep:#1B5FCC;
+    --blue-pale:#E9F1FE;
+    --slate:#5A6B7B;
+    --cream:#F6F2E9;
+    --cream-deep:#EFE9DB;
+    --white:#FFFFFF;
+    --line:#E2DBCB;
+    --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+    --serif:'Newsreader',Georgia,serif;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--serif);
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    font-size:18px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.eyebrow,.btn,nav,.metric-num,.lang,.logo-word,label,.foot-link,.stepnum{font-family:var(--sans)}
+  h1,h2,h3{line-height:1.12;font-weight:600;letter-spacing:-0.02em;color:var(--ink)}
+  h2{font-size:clamp(28px,4vw,40px);margin-bottom:.4em}
+  h3{font-size:20px;font-weight:600}
+  p{color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--blue-deep);margin-bottom:14px;display:block;
+  }
+  section{padding:88px 0}
+  section[id]{scroll-margin-top:84px}
+  .lede{color:var(--slate);font-size:19px}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand svg{display:block}
+  .logo-word{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+  .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks a{font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--ink-soft);transition:color .15s}
+  .navlinks a:hover{color:var(--blue-deep)}
+  .navright{display:flex;align-items:center;gap:18px}
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--white)}
+  .lang button{font-family:var(--sans);font-size:13px;font-weight:600;border:0;background:transparent;color:var(--slate);padding:7px 13px;cursor:pointer;transition:.15s}
+  .lang button.on{background:var(--ink);color:var(--white)}
+  .btn{
+    display:inline-block;font-size:14.5px;font-weight:600;cursor:pointer;border:0;border-radius:999px;
+    padding:12px 22px;transition:transform .12s,background .15s;letter-spacing:.005em;
+  }
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--blue-deep)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .btn:active{transform:translateY(1px)}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
+
+  /* hero */
+  .hero{background:var(--ink);color:#fff;padding:96px 0 104px;position:relative;overflow:hidden}
+  .hero .eyebrow{color:#7FB0FF}
+  .hero h1{color:#fff;font-size:clamp(38px,6.2vw,68px);max-width:14ch}
+  .hero .sub{color:#C3CEDC;font-size:clamp(18px,2.3vw,22px);max-width:46ch;margin:24px 0 34px;line-height:1.5}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+  .hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+  .hero-trust{margin-top:42px;font-size:15px;color:#8A99AB;max-width:44ch}
+  .hero-trust b{color:#C3CEDC;font-weight:500}
+  .signal{position:absolute;right:-40px;bottom:-30px;width:min(46%,560px);opacity:.9;pointer-events:none}
+  @media(max-width:880px){.signal{display:none}}
+
+  /* intro / thesis */
+  .thesis{background:var(--cream)}
+  .thesis .quote{font-size:clamp(24px,3.4vw,34px);line-height:1.35;max-width:20ch;font-weight:500}
+  .thesis-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+  .thesis p{color:var(--slate);font-size:19px}
+  .thesis em{font-style:italic;color:var(--ink)}
+  @media(max-width:760px){.thesis-grid{grid-template-columns:1fr;gap:28px}}
+
+  /* capabilities chain */
+  .caps{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .caps-head{max-width:54ch;margin-bottom:54px}
+  .chain{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:30px 26px 32px}
+  .step .stepnum{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--blue);display:flex;align-items:center;gap:9px;margin-bottom:18px}
+  .step .dot{width:9px;height:9px;border-radius:50%;background:var(--blue);display:inline-block}
+  .step h3{margin-bottom:6px}
+  .step .tool{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);margin-bottom:14px}
+  .step p{font-size:16.5px;color:var(--ink-soft);line-height:1.55}
+  @media(max-width:760px){.chain{grid-template-columns:1fr;gap:16px}}
+
+  /* differentiators */
+  .why{background:var(--cream)}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:46px}
+  .why-item{border-top:2px solid var(--blue);padding-top:20px}
+  .why-item h3{margin-bottom:10px}
+  .why-item p{font-size:16.5px;color:var(--slate)}
+  @media(max-width:760px){.why-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* proof */
+  .proof{background:var(--ink);color:#fff}
+  .proof .eyebrow{color:#7FB0FF}
+  .proof h2{color:#fff}
+  .proof-note{color:#8A99AB;font-size:15.5px;max-width:50ch;margin-top:6px}
+  .logos{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;margin:40px 0 56px;padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .logos span{font-family:var(--sans);font-weight:700;font-size:20px;letter-spacing:-.01em;color:#9DB0C6;opacity:.8}
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .metric-num{font-size:46px;font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1}
+  .metric-num .u{color:var(--blue);font-size:30px}
+  .metric p{color:#C3CEDC;font-size:16px;margin-top:12px;max-width:30ch}
+  @media(max-width:760px){.metrics{grid-template-columns:1fr;gap:26px}}
+
+  /* about */
+  .about{background:var(--white);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:160px 1fr;gap:44px;align-items:start}
+  .avatar{width:160px;height:160px;border-radius:18px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+  .avatar span{font-family:var(--sans);font-weight:700;font-size:46px;color:var(--blue-deep)}
+  .about h2{font-size:clamp(24px,3vw,32px)}
+  .about p{color:var(--ink-soft);font-size:18px;max-width:62ch}
+  .about .role{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--slate);letter-spacing:.03em;margin-bottom:14px}
+  @media(max-width:620px){.about-grid{grid-template-columns:1fr;gap:24px}.avatar{width:104px;height:104px}.avatar span{font-size:34px}}
+
+  /* cta band */
+  .ctaband{background:var(--blue);color:#fff;text-align:center}
+  .ctaband h2{color:#fff;max-width:22ch;margin:0 auto .8em}
+  .ctaband p{color:#E1ECFF;max-width:46ch;margin:0 auto 28px;font-size:19px}
+  .ctaband .btn-primary{background:#fff;color:var(--blue-deep)}
+  .ctaband .btn-primary:hover{background:var(--ink);color:#fff}
+
+  /* contact */
+  .contact{background:var(--cream)}
+  .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:54px}
+  .contact h2{font-size:clamp(26px,3.4vw,36px)}
+  .contact .lede{margin-top:10px}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field.full{grid-column:1/-1}
+  label{font-size:13px;font-weight:600;color:var(--slate);letter-spacing:.02em}
+  input,textarea{font-family:var(--serif);font-size:16px;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;transition:border .15s,box-shadow .15s}
+  input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-pale)}
+  textarea{min-height:120px;resize:vertical}
+  @media(max-width:760px){.contact-grid{grid-template-columns:1fr;gap:30px}form{grid-template-columns:1fr}}
+
+  /* footer */
+  footer{background:var(--ink);color:#fff;padding:54px 0 40px}
+  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-tag{font-family:var(--sans);font-size:14px;color:#8A99AB;letter-spacing:.04em;margin-top:14px}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-link{font-size:14px;font-weight:500;color:#C3CEDC}
+  .foot-link:hover{color:#fff}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:13px;color:#6F7E90;font-family:var(--sans)}
+
+  :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media(max-width:880px){
+    .navlinks{display:none}
+    .menu-toggle{display:inline-flex}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="axiesdata-landing.html" aria-label="aXiesData home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <rect width="34" height="34" rx="8" fill="#0E1B2C"/>
+        <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M11 23 L23 11" stroke="#2D7FF7" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-word">a<span style="color:var(--blue)">X</span>iesData</span>
+    </a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="axiesdata-capabilities.html" class="t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+      <a href="axiesdata-about.html" class="t" data-es="Nosotros" data-en="About">Nosotros</a>
+      <a href="axiesdata-diagnostic.html" class="t" data-es="Diagnóstico" data-en="Diagnostic">Diagnóstico</a>
+    </nav>
+    <div class="navright">
+      <div class="lang" role="group" aria-label="Language">
+        <button id="es" class="on" onclick="setLang('es')">ES</button>
+        <button id="en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Process mining · business intelligence · IA" data-en="Process mining · business intelligence · AI">Process mining · business intelligence · IA</span>
+      <h1 class="t" data-es="Vea cómo funciona realmente su negocio." data-en="See how your business really runs.">Vea cómo funciona realmente su negocio.</h1>
+      <p class="sub t" data-es="Process mining, BI e IA: convertimos cómo funciona su negocio en cómo mejora. Con dirección senior, del diagnóstico a los resultados." data-en="Process mining, BI, and AI — turning how your business runs into how it improves. Senior-led, from diagnosis to results.">Process mining, BI e IA: convertimos cómo funciona su negocio en cómo mejora. Con dirección senior, del diagnóstico a los resultados.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary t" data-es="Agende un diagnóstico de procesos" data-en="Book a process diagnostic">Agende un diagnóstico de procesos</a>
+        <a href="#capabilities" class="btn btn-ghost t" data-es="Ver nuestro enfoque" data-en="See our approach">Ver nuestro enfoque</a>
+      </div>
+      <p class="hero-trust t" data-es="Con 25 años dentro del mundo de los datos empresariales — incluyendo desde adentro de <b>Celonis</b> y <b>Qlik</b>." data-en="Built on 25 years inside enterprise data — including from within <b>Celonis</b> and <b>Qlik</b>.">Con 25 años dentro del mundo de los datos empresariales — incluyendo desde adentro de <b>Celonis</b> y <b>Qlik</b>.</p>
+    </div>
+    <svg class="signal" viewBox="0 0 560 360" aria-hidden="true">
+      <polyline points="40,320 150,250 250,260 350,150 470,90 540,40" fill="none" stroke="#2D7FF7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+      <circle cx="40" cy="320" r="5" fill="#2D7FF7" opacity=".5"/>
+      <circle cx="150" cy="250" r="5" fill="#2D7FF7" opacity=".6"/>
+      <circle cx="250" cy="260" r="5" fill="#2D7FF7" opacity=".6"/>
+      <circle cx="350" cy="150" r="6" fill="#2D7FF7" opacity=".8"/>
+      <circle cx="470" cy="90" r="6" fill="#2D7FF7"/>
+      <circle cx="540" cy="40" r="8" fill="#2D7FF7"/>
+    </svg>
+  </section>
+
+  <!-- THESIS -->
+  <section class="thesis">
+    <div class="wrap thesis-grid">
+      <div>
+        <span class="eyebrow t" data-es="Qué hacemos" data-en="What we do">Qué hacemos</span>
+        <p class="quote t" data-es="Procesos reales, no procesos supuestos." data-en="Real processes, not assumed processes.">Procesos reales, no procesos supuestos.</p>
+      </div>
+      <div>
+        <p class="t" data-es="La mayoría de las consultoras empieza con un tablero o una presentación. Nosotros empezamos por descubrir lo que <em>realmente</em> ocurre dentro de sus procesos — extrayendo el proceso real de los registros de sus sistemas — para luego medirlo y aplicar IA donde de verdad genera valor." data-en="Most consultancies start with a dashboard or a slide. We start by mining what <em>actually</em> happens inside your processes — extracting the real process from the event logs already in your systems — then measure it, then apply AI where it genuinely pays off.">La mayoría de las consultoras empieza con un tablero o una presentación. Nosotros empezamos por descubrir lo que <em>realmente</em> ocurre dentro de sus procesos — extrayendo el proceso real de los registros de sus sistemas — para luego medirlo y aplicar IA donde de verdad genera valor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="caps" id="capabilities">
+    <div class="wrap">
+      <div class="caps-head">
+        <span class="eyebrow t" data-es="Capacidades" data-en="Capabilities">Capacidades</span>
+        <h2 class="t" data-es="Una cadena, no un menú." data-en="One chain, not a menu.">Una cadena, no un menú.</h2>
+        <p class="lede t" data-es="Descubrir, medir y actuar — con dirección senior en cada proyecto, sin traspasos a equipos junior." data-en="Discover, measure, and act — with senior leadership on every engagement, never handed down to a junior bench.">Descubrir, medir y actuar — con dirección senior en cada proyecto, sin traspasos a equipos junior.</p>
+      </div>
+      <div class="chain">
+        <div class="step">
+          <div class="stepnum"><span class="dot"></span>01 · <span class="t" data-es="Descubrir" data-en="Discover">Descubrir</span></div>
+          <div class="tool">Process mining</div>
+          <h3 class="t" data-es="Revele cómo fluye el trabajo" data-en="Reveal how work flows">Revele cómo fluye el trabajo</h3>
+          <p class="t" data-es="Con Celonis y SAP Signavio extraemos el proceso real de sus sistemas y exponemos los cuellos de botella, el retrabajo y las pérdidas que cuestan tiempo y capacidad." data-en="With Celonis and SAP Signavio we extract the real process from your systems and expose the bottlenecks, rework, and leakage costing you time and capacity.">Con Celonis y SAP Signavio extraemos el proceso real de sus sistemas y exponemos los cuellos de botella, el retrabajo y las pérdidas que cuestan tiempo y capacidad.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum"><span class="dot"></span>02 · <span class="t" data-es="Medir" data-en="Measure">Medir</span></div>
+          <div class="tool">Business intelligence</div>
+          <h3 class="t" data-es="Convierta hallazgos en decisiones" data-en="Turn findings into decisions">Convierta hallazgos en decisiones</h3>
+          <p class="t" data-es="Con Qlik y Power BI construimos los tableros con los que su equipo realmente dirige el negocio: claros, en vivo y confiables." data-en="With Qlik and Power BI we build the dashboards your leaders actually run the business on — clear, live, and trusted.">Con Qlik y Power BI construimos los tableros con los que su equipo realmente dirige el negocio: claros, en vivo y confiables.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum"><span class="dot"></span>03 · <span class="t" data-es="Actuar" data-en="Act">Actuar</span></div>
+          <div class="tool">Artificial intelligence</div>
+          <h3 class="t" data-es="Prediga y automatice" data-en="Predict and automate">Prediga y automatice</h3>
+          <p class="t" data-es="Aplicamos IA donde el análisis demuestra que vale la pena: predicción, asistentes sobre sus propios datos gobernados y automatización de los cuellos de botella detectados." data-en="We apply AI where mining proves it pays — forecasting, assistants on your own governed data, and automation of the bottlenecks we found.">Aplicamos IA donde el análisis demuestra que vale la pena: predicción, asistentes sobre sus propios datos gobernados y automatización de los cuellos de botella detectados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why" id="why">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Por qué axiesdata" data-en="Why axiesdata">Por qué axiesdata</span>
+      <h2 class="t" data-es="La profundidad de un veterano, el foco de una boutique." data-en="A veteran's depth, a boutique's focus.">La profundidad de un veterano, el foco de una boutique.</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3 class="t" data-es="Primero el proceso" data-en="Process-first">Primero el proceso</h3>
+          <p class="t" data-es="Partimos de la evidencia de cómo ocurre el trabajo — no de una herramienta ni de una presentación de transformación." data-en="We lead with evidence of how work actually happens — not a tool, and not a transformation deck.">Partimos de la evidencia de cómo ocurre el trabajo — no de una herramienta ni de una presentación de transformación.</p>
+        </div>
+        <div class="why-item">
+          <h3 class="t" data-es="Entrega liderada por seniors" data-en="Senior-led delivery">Entrega liderada por seniors</h3>
+          <p class="t" data-es="Cada proyecto lo lidera un profesional senior con décadas de experiencia enterprise, respaldado por un equipo enfocado — nunca delegado a un banco de recursos junior." data-en="Every engagement is led by a senior with decades of enterprise experience, backed by a focused team — never handed to a faceless junior bench.">Cada proyecto lo lidera un profesional senior con décadas de experiencia enterprise, respaldado por un equipo enfocado — nunca delegado a un banco de recursos junior.</p>
+        </div>
+        <div class="why-item">
+          <h3 class="t" data-es="Experiencia desde adentro" data-en="Insider pedigree">Experiencia desde adentro</h3>
+          <p class="t" data-es="Forjada desde adentro de Celonis y Qlik, a lo largo de 25 años de datos empresariales." data-en="Built from inside both Celonis and Qlik, across 25 years of enterprise data.">Forjada desde adentro de Celonis y Qlik, a lo largo de 25 años de datos empresariales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof" id="proof">
+    <div class="wrap">
+      <span class="eyebrow t" data-es="Confianza en proyectos de este nivel" data-en="Trusted on work at this level">Confianza en proyectos de este nivel</span>
+      <h2 class="t" data-es="Resultados, no adjetivos." data-en="Results, not adjectives.">Resultados, no adjetivos.</h2>
+      <p class="proof-note t" data-es="Proyectos enterprise entregados de forma directa y junto a consultoras líderes." data-en="Enterprise engagements delivered directly and alongside leading consultancies.">Proyectos enterprise entregados de forma directa y junto a consultoras líderes.</p>
+      <div class="logos" aria-label="Client engagements">
+        <span>FedEx</span><span>Whirlpool</span><span>Wells&nbsp;Fargo</span><span>MercadoLibre</span><span>Alsea</span><span>Derco</span><span>CBC</span>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-num">~90<span class="u">%</span></div>
+          <p class="t" data-es="menos esfuerzo de reporting en un sistema de inteligencia competitiva regional." data-en="less reporting effort on a regional competitive-intelligence system.">menos esfuerzo de reporting en un sistema de inteligencia competitiva regional.</p>
+        </div>
+        <div class="metric">
+          <div class="metric-num">~20<span class="u">%</span></div>
+          <p class="t" data-es="de capacidad del equipo liberada al optimizar procesos y reporting." data-en="of team capacity freed by optimizing process and reporting.">de capacidad del equipo liberada al optimizar procesos y reporting.</p>
+        </div>
+        <div class="metric">
+          <div class="metric-num"><span class="u">1ª</span></div>
+          <p class="t" data-es="implementación de process mining en la nube de Celonis en Latinoamérica." data-en="cloud process-mining deployment with Celonis in Latin America.">implementación de process mining en la nube de Celonis en Latinoamérica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="avatar" aria-hidden="true"><span>HA</span></div>
+      <div>
+        <span class="eyebrow t" data-es="Nosotros" data-en="About">Nosotros</span>
+        <h2>Hernán Azpiri</h2>
+        <p class="role t" data-es="Fundador y especialista principal" data-en="Founder & principal specialist">Fundador y especialista principal</p>
+        <p class="t" data-es="aXiesData es una práctica boutique de procesos y datos liderada por Hernán Azpiri — especialista senior con más de 25 años en SAP, BI y process mining. Ex Customer Success Manager en Celonis y ex Technical Account Manager en QlikTech, ha entregado proyectos de procesos y analítica para grandes empresas en Latinoamérica, Estados Unidos y Europa. Fundó aXiesData para llevar trabajo de nivel enterprise a empresas que necesitan experiencia senior sin la estructura de las grandes consultoras. MBA, Rice University." data-en="aXiesData is a boutique process-and-data practice led by Hernán Azpiri — a senior specialist with 25+ years across SAP, BI, and process mining. A former Customer Success Manager at Celonis and Technical Account Manager at QlikTech, he has delivered process and analytics work for global enterprises across Latin America, the US, and Europe. He founded aXiesData to bring enterprise-grade work to companies that need senior expertise without big-firm overhead. MBA, Rice University.">aXiesData es una práctica boutique de procesos y datos liderada por Hernán Azpiri — especialista senior con más de 25 años en SAP, BI y process mining. Ex Customer Success Manager en Celonis y ex Technical Account Manager en QlikTech, ha entregado proyectos de procesos y analítica para grandes empresas en Latinoamérica, Estados Unidos y Europa. Fundó aXiesData para llevar trabajo de nivel enterprise a empresas que necesitan experiencia senior sin la estructura de las grandes consultoras. MBA, Rice University.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="ctaband">
+    <div class="wrap">
+      <h2 class="t" data-es="¿Quiere saber qué hacen realmente sus procesos?" data-en="Curious what your processes are really doing?">¿Quiere saber qué hacen realmente sus procesos?</h2>
+      <p class="t" data-es="Comience con un diagnóstico de procesos de alcance definido — un primer paso claro, sin necesidad de comprometer una plataforma." data-en="Start with a fixed-scope process diagnostic — a clear first step, with no platform commitment required.">Comience con un diagnóstico de procesos de alcance definido — un primer paso claro, sin necesidad de comprometer una plataforma.</p>
+      <a href="#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow t" data-es="Contacto" data-en="Contact">Contacto</span>
+        <h2 class="t" data-es="Hablemos de su proceso." data-en="Let's talk about your process.">Hablemos de su proceso.</h2>
+        <p class="lede t" data-es="Cuéntenos dónde sospecha que se pierde tiempo o capacidad. Respondemos personalmente." data-en="Tell us where you suspect time or capacity is leaking. We reply personally.">Cuéntenos dónde sospecha que se pierde tiempo o capacidad. Respondemos personalmente.</p>
+      </div>
+      <form onsubmit="return false">
+        <div class="field">
+          <label class="t" data-es="Nombre" data-en="Name">Nombre</label>
+          <input type="text" class="tph" data-es-ph="Su nombre" data-en-ph="Your name" placeholder="Su nombre">
+        </div>
+        <div class="field">
+          <label class="t" data-es="País" data-en="Country">País</label>
+          <input type="text" class="tph" data-es-ph="País" data-en-ph="Country" placeholder="País">
+        </div>
+        <div class="field">
+          <label class="t" data-es="Empresa" data-en="Company">Empresa</label>
+          <input type="text" class="tph" data-es-ph="Empresa" data-en-ph="Company" placeholder="Empresa">
+        </div>
+        <div class="field">
+          <label class="t" data-es="Cargo" data-en="Position">Cargo</label>
+          <input type="text" class="tph" data-es-ph="Cargo" data-en-ph="Position" placeholder="Cargo">
+        </div>
+        <div class="field full">
+          <label class="t" data-es="Email" data-en="Email">Email</label>
+          <input type="email" class="tph" data-es-ph="nombre@empresa.com" data-en-ph="name@company.com" placeholder="nombre@empresa.com">
+        </div>
+        <div class="field full">
+          <label class="t" data-es="Mensaje" data-en="Message">Mensaje</label>
+          <textarea class="tph" data-es-ph="¿Qué proceso le gustaría entender mejor?" data-en-ph="Which process would you like to understand better?" placeholder="¿Qué proceso le gustaría entender mejor?"></textarea>
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-primary t" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand">
+          <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
+            <rect width="34" height="34" rx="8" fill="#15233A"/>
+            <path d="M11 11 L23 23" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+            <path d="M11 23 L23 11" stroke="#2D7FF7" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="logo-word" style="color:#fff">a<span style="color:var(--blue)">X</span>iesData</span>
+        </div>
+        <div class="foot-tag">insights through data · results through insight</div>
+      </div>
+      <div class="foot-links">
+        <a class="foot-link" href="#capabilities" class="t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+        <a class="foot-link" href="#why" class="t" data-es="Enfoque" data-en="Approach">Enfoque</a>
+        <a class="foot-link" href="#proof" class="t" data-es="Clientes" data-en="Clients">Clientes</a>
+        <a class="foot-link" href="https://www.linkedin.com/in/hernanazpiri" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="foot-link" href="https://www.instagram.com/axiesdata" target="_blank" rel="noopener">Instagram</a>
+        <a class="foot-link" href="mailto:contact@axiesdata.com">contact@axiesdata.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> aXiesData</span>
+      <span class="t" data-es="Process mining · Business intelligence · Inteligencia artificial" data-en="Process mining · Business intelligence · Artificial intelligence">Process mining · Business intelligence · Inteligencia artificial</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.t').forEach(function(el){
+      var v = el.getAttribute('data-'+lang);
+      if(v!==null) el.innerHTML = v;
+    });
+    document.querySelectorAll('.tph').forEach(function(el){
+      var v = el.getAttribute('data-'+lang+'-ph');
+      if(v!==null) el.setAttribute('placeholder', v);
+    });
+    document.getElementById('es').classList.toggle('on', lang==='es');
+    document.getElementById('en').classList.toggle('on', lang==='en');
+    document.title = lang==='es'
+      ? 'aXiesData — Process mining, business intelligence e IA'
+      : 'aXiesData — Process mining, business intelligence & AI';
+  }
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  setLang('es');
+</script>
+</body>
+</html>
