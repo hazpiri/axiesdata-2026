@@ -186,6 +186,47 @@
     .navlinks{display:none}
     .menu-toggle{display:inline-flex}
   }
+
+/* ===== responsive nav + mobile menu ===== */
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:9px;flex-direction:column;gap:5px;margin-left:auto}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s,opacity .2s}
+.nav-collapse{display:flex;align-items:center;justify-content:space-between;flex:1;margin-left:40px;gap:24px}
+.nav-dd{position:relative}
+.nav-dd>.dd-top{display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.nav-dd>.dd-top::after{content:"\25BE";font-size:9px;color:var(--slate);position:relative;top:1px}
+.dd-menu{position:absolute;top:calc(100% + 12px);left:-14px;min-width:238px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(14,27,44,.13);padding:8px;display:none;flex-direction:column;gap:2px;z-index:60}
+.dd-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
+.nav-dd:hover .dd-menu,.nav-dd:focus-within .dd-menu{display:flex}
+.dd-menu a{padding:10px 12px;border-radius:9px;font-size:14px;font-weight:500;color:var(--ink-soft);white-space:nowrap;font-family:var(--sans)}
+.dd-menu a:hover{background:var(--blue-pale);color:var(--blue-deep)}
+.pillar-more{display:inline-block;margin-top:22px;font-family:var(--sans);font-weight:600;font-size:14.5px;color:var(--blue-deep)}
+.pillar-more:hover{color:var(--blue)}
+.flow .node.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.foot-nav{display:flex;gap:20px;flex-wrap:wrap}
+.foot-nav a{color:#C3CEDC;font-family:var(--sans);font-size:14px;font-weight:500}
+.foot-nav a:hover{color:#fff}
+img,svg{max-width:100%}
+@media(max-width:880px){
+  html,body{overflow-x:hidden}
+  .menu-toggle{display:flex}
+  .nav-collapse{position:absolute;top:100%;left:0;right:0;width:100%;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;margin:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 16px 30px rgba(14,27,44,.10);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .25s ease,opacity .2s ease,visibility .2s}
+  header.open .nav-collapse{max-height:84vh;overflow-y:auto;opacity:1;visibility:visible}
+  .navlinks{display:flex;flex-direction:column;align-items:stretch;gap:0;width:100%;padding:6px 22px 0}
+  .navlinks>a,.nav-dd>.dd-top{display:block;padding:14px 4px;font-size:16px;border-bottom:1px solid rgba(14,27,44,.07)}
+  .nav-dd{width:100%}
+  .nav-dd>.dd-top::after{content:""}
+  .dd-menu{position:static;display:flex;box-shadow:none;border:0;background:transparent;padding:2px 0 8px 16px;margin:0;min-width:0}
+  .dd-menu a{padding:11px 4px;border-bottom:1px solid rgba(14,27,44,.05)}
+  .navright{flex-direction:column;align-items:stretch;gap:14px;width:100%;padding:16px 22px 22px}
+  .navright .lang{align-self:flex-start}
+  .navright .btn{width:100%;text-align:center;padding-top:13px;padding-bottom:13px}
+  header.open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  header.open .menu-toggle span:nth-child(2){opacity:0}
+  header.open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .wrap{padding-left:22px;padding-right:22px}
+}
+@media(max-width:560px){ .wrap{padding-left:18px;padding-right:18px} }
+
 </style>
 </head>
 <body>
@@ -200,8 +241,18 @@
       </svg>
       <span class="logo-word">a<span style="color:var(--blue)">X</span>iesData</span>
     </a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+    <div class="nav-collapse" id="navmenu">
     <nav class="navlinks" aria-label="Primary">
-      <a href="axiesdata-capabilities.html" class="t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+      <div class="nav-dd">
+        <a href="axiesdata-capabilities.html" class="dd-top t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+        <div class="dd-menu">
+          <a href="axiesdata-capabilities.html" class="t" data-es="Visión general" data-en="Overview">Visión general</a>
+          <a href="axiesdata-process-mining.html" class="t" data-es="Process mining" data-en="Process mining">Process mining</a>
+          <a href="axiesdata-bi.html" class="t" data-es="Business intelligence" data-en="Business intelligence">Business intelligence</a>
+          <a href="axiesdata-ai.html" class="t" data-es="Inteligencia artificial" data-en="Artificial intelligence">Inteligencia artificial</a>
+        </div>
+      </div>
       <a href="axiesdata-about.html" class="t" data-es="Nosotros" data-en="About">Nosotros</a>
       <a href="axiesdata-diagnostic.html" class="t" data-es="Diagnóstico" data-en="Diagnostic">Diagnóstico</a>
     </nav>
@@ -211,6 +262,7 @@
         <button id="en" onclick="setLang('en')">EN</button>
       </div>
       <a href="#contact" class="btn btn-primary t" data-es="Agendar diagnóstico" data-en="Book a diagnostic">Agendar diagnóstico</a>
+    </div>
     </div>
   </div>
 </header>
@@ -317,16 +369,16 @@
       </div>
       <div class="metrics">
         <div class="metric">
-          <div class="metric-num">~90<span class="u">%</span></div>
-          <p class="t" data-es="menos esfuerzo de reporting en un sistema de inteligencia competitiva regional." data-en="less reporting effort on a regional competitive-intelligence system.">menos esfuerzo de reporting en un sistema de inteligencia competitiva regional.</p>
-        </div>
-        <div class="metric">
-          <div class="metric-num">~20<span class="u">%</span></div>
-          <p class="t" data-es="de capacidad del equipo liberada al optimizar procesos y reporting." data-en="of team capacity freed by optimizing process and reporting.">de capacidad del equipo liberada al optimizar procesos y reporting.</p>
+          <div class="metric-num">25<span class="u">+</span></div>
+          <p class="t" data-es="años dentro de SAP, BI y process mining a nivel enterprise." data-en="years inside SAP, BI, and process mining at enterprise scale.">años dentro de SAP, BI y process mining a nivel enterprise.</p>
         </div>
         <div class="metric">
           <div class="metric-num"><span class="u">1ª</span></div>
           <p class="t" data-es="implementación de process mining en la nube de Celonis en Latinoamérica." data-en="cloud process-mining deployment with Celonis in Latin America.">implementación de process mining en la nube de Celonis en Latinoamérica.</p>
+        </div>
+        <div class="metric">
+          <div class="metric-num" style="font-size:clamp(30px,4vw,42px)">MX·BR</div>
+          <p class="t" data-es="primeras implementaciones de Celonis en México y Brasil." data-en="first Celonis deployments in Mexico and Brazil.">primeras implementaciones de Celonis en México y Brasil.</p>
         </div>
       </div>
     </div>
@@ -413,6 +465,9 @@
       </div>
       <div class="foot-links">
         <a class="foot-link" href="#capabilities" class="t" data-es="Capacidades" data-en="Capabilities">Capacidades</a>
+        <a class="foot-link t" href="axiesdata-process-mining.html" data-es="Process mining" data-en="Process mining">Process mining</a>
+        <a class="foot-link t" href="axiesdata-bi.html" data-es="Business intelligence" data-en="Business intelligence">Business intelligence</a>
+        <a class="foot-link t" href="axiesdata-ai.html" data-es="Inteligencia artificial" data-en="Artificial intelligence">Inteligencia artificial</a>
         <a class="foot-link" href="#why" class="t" data-es="Enfoque" data-en="Approach">Enfoque</a>
         <a class="foot-link" href="#proof" class="t" data-es="Clientes" data-en="Clients">Clientes</a>
         <a class="foot-link" href="https://www.linkedin.com/company/67348684" target="_blank" rel="noopener">LinkedIn</a>
@@ -465,5 +520,6 @@
   }
   setLang('es');
 </script>
+<script>function toggleMenu(b){var h=b.closest('header');var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');}</script>
 </body>
 </html>
