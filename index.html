@@ -415,33 +415,35 @@ img,svg{max-width:100%}
         <p class="lede t" data-es="Cuéntenos dónde sospecha que se pierde tiempo o capacidad. Respondemos personalmente." data-en="Tell us where you suspect time or capacity is leaking. We reply personally.">Cuéntenos dónde sospecha que se pierde tiempo o capacidad. Respondemos personalmente.</p>
       </div>
       <form id="contactForm" onsubmit="return sendMessage(event)">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <input type="hidden" name="_subject" value="New enquiry — axiesdata.com">
         <div class="field">
           <label class="t" data-es="Nombre" data-en="Name">Nombre</label>
-          <input id="cf-name" type="text" class="tph" data-es-ph="Su nombre" data-en-ph="Your name" placeholder="Su nombre">
+          <input id="cf-name" name="name" required type="text" class="tph" data-es-ph="Su nombre" data-en-ph="Your name" placeholder="Su nombre">
         </div>
         <div class="field">
           <label class="t" data-es="País" data-en="Country">País</label>
-          <input id="cf-country" type="text" class="tph" data-es-ph="País" data-en-ph="Country" placeholder="País">
+          <input id="cf-country" name="country" type="text" class="tph" data-es-ph="País" data-en-ph="Country" placeholder="País">
         </div>
         <div class="field">
           <label class="t" data-es="Empresa" data-en="Company">Empresa</label>
-          <input id="cf-company" type="text" class="tph" data-es-ph="Empresa" data-en-ph="Company" placeholder="Empresa">
+          <input id="cf-company" name="company" type="text" class="tph" data-es-ph="Empresa" data-en-ph="Company" placeholder="Empresa">
         </div>
         <div class="field">
           <label class="t" data-es="Cargo" data-en="Position">Cargo</label>
-          <input id="cf-position" type="text" class="tph" data-es-ph="Cargo" data-en-ph="Position" placeholder="Cargo">
+          <input id="cf-position" name="position" type="text" class="tph" data-es-ph="Cargo" data-en-ph="Position" placeholder="Cargo">
         </div>
         <div class="field full">
           <label class="t" data-es="Email" data-en="Email">Email</label>
-          <input id="cf-email" type="email" class="tph" data-es-ph="nombre@empresa.com" data-en-ph="name@company.com" placeholder="nombre@empresa.com">
+          <input id="cf-email" name="email" required type="email" class="tph" data-es-ph="nombre@empresa.com" data-en-ph="name@company.com" placeholder="nombre@empresa.com">
         </div>
         <div class="field full">
           <label class="t" data-es="Mensaje" data-en="Message">Mensaje</label>
-          <textarea id="cf-message" class="tph" data-es-ph="¿Qué proceso le gustaría entender mejor?" data-en-ph="Which process would you like to understand better?" placeholder="¿Qué proceso le gustaría entender mejor?"></textarea>
+          <textarea id="cf-message" name="message" class="tph" data-es-ph="¿Qué proceso le gustaría entender mejor?" data-en-ph="Which process would you like to understand better?" placeholder="¿Qué proceso le gustaría entender mejor?"></textarea>
         </div>
         <div class="field full">
           <button type="submit" class="btn btn-primary t" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
-          <p id="cf-status" class="t" data-es="Se abrirá su aplicación de correo con el mensaje listo para enviar." data-en="Your email app will open with the message ready to send." style="font-size:13px;color:var(--slate);margin-top:10px;font-family:var(--sans)">Se abrirá su aplicación de correo con el mensaje listo para enviar.</p>
+          <p id="cf-status" class="t" data-es="Respondemos personalmente, normalmente en un día hábil." data-en="We reply personally, usually within one business day." style="font-size:13px;color:var(--slate);margin-top:10px;font-family:var(--sans)">Respondemos personalmente, normalmente en un día hábil.</p>
         </div>
       </form>
     </div>
@@ -500,22 +502,27 @@ img,svg{max-width:100%}
       : 'aXiesData — Process mining, business intelligence & AI';
   }
   document.getElementById('yr').textContent = new Date().getFullYear();
-  function sendMessage(e){
+  // === Contact form backend ===================================================
+  // Replace YOUR_FORM_ID with the form ID from your Formspree account
+  // (formspree.io -> New form -> set the recipient to contact@axiesdata.com).
+  var FORM_ENDPOINT = "https://formspree.io/f/xdaqqgwp";
+  async function sendMessage(e){
     e.preventDefault();
-    var v=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
-    var lang=document.documentElement.lang;
-    var name=v('cf-name'), country=v('cf-country'), company=v('cf-company'),
-        position=v('cf-position'), email=v('cf-email'), message=v('cf-message');
-    var L = lang==='es'
-      ? {subj:'Consulta — diagnóstico de procesos', f:['Nombre','País','Empresa','Cargo','Email','Mensaje']}
-      : {subj:'Process diagnostic enquiry',           f:['Name','Country','Company','Position','Email','Message']};
-    var subject = L.subj + (name ? ' — ' + name : '');
-    var body = [
-      L.f[0]+': '+name, L.f[1]+': '+country, L.f[2]+': '+company,
-      L.f[3]+': '+position, L.f[4]+': '+email, '', L.f[5]+':', message
-    ].join('\n');
-    window.location.href = 'mailto:contact@axiesdata.com?subject=' +
-      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var form = document.getElementById('contactForm');
+    var status = document.getElementById('cf-status');
+    var btn = form.querySelector('button[type=submit]');
+    var lang = document.documentElement.lang;
+    var T = lang==='es'
+      ? {send:'Enviar mensaje', sending:'Enviando…', ok:'¡Gracias! Le responderemos personalmente en breve.', err:'No se pudo enviar. Escríbanos a contact@axiesdata.com.', cfg:'Formulario sin configurar: reemplace YOUR_FORM_ID por su ID de Formspree.'}
+      : {send:'Send message',  sending:'Sending…',  ok:'Thank you — we reply personally, shortly.',            err:'Something went wrong. Please email contact@axiesdata.com.',   cfg:'Form not configured yet: replace YOUR_FORM_ID with your Formspree ID.'};
+    if (FORM_ENDPOINT.indexOf('YOUR_FORM_ID') !== -1){ status.textContent=T.cfg; status.style.color='#B45309'; return false; }
+    btn.disabled=true; btn.textContent=T.sending; status.textContent='';
+    try{
+      var res = await fetch(FORM_ENDPOINT, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
+      if (res.ok){ form.reset(); status.textContent=T.ok; status.style.color='var(--blue-deep)'; }
+      else { status.textContent=T.err; status.style.color='#B45309'; }
+    } catch(err){ status.textContent=T.err; status.style.color='#B45309'; }
+    btn.disabled=false; btn.textContent=T.send;
     return false;
   }
   setLang('es');
